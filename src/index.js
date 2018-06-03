@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import Main from './Components/Main'
+
+
+
 
 // WRITING ELEMENT
 
@@ -17,47 +21,47 @@ import ReactDOM from 'react-dom';
  // ]
 
  // COMPONENTS- help break down the UI into smaller usable pieces by combining all of the UI components into a single, main component that's going to form all of the UI required
-class List extends Component {
-    render() {
-        return (    <ul>
-                        { this.props.tasks.map((task, index) => <li key = {index}> {task} </li>)}
-                    </ul>)
-    }
-}
+// class List extends Component {
+//     render() {
+//         return (    <ul>
+//                         { this.props.tasks.map((task, index) => <li key = {index}> {task} </li>)}
+//                     </ul>)
+//     }
+// }
 
-class Title extends Component {
-    render() {
-        return (<h1>{this.props.todo}</h1>)
-    }
-}
+// class Title extends Component {
+//     render() {
+//         return (<h1>{this.props.todo}</h1>)
+//     }
+// }
 
-class SubTitle extends Component {
-    render() {
-        return(<strong>These are today's tasks</strong>)
-    }
-}
+// class SubTitle extends Component {
+//     render() {
+//         return(<strong>These are today's tasks</strong>)
+//     }
+// }
 
-class Main extends Component {
-    render() {
-        return(
-            <div>
-            <Title todo = {'toDos'} />
-            <SubTitle/>
-            <List tasks = {[
-                'Pack bags to head back to Chicago',
-                'download podcasts for the drive home',
-                'Make sure we arent leaving baby stuff behind'
-            ]}/>
-
-            <List tasks = {[
-                'Go to breakfast with family',
-                'Drive home to from MI',
-                'Watch the NBA Finals'
-            ]}/>
-            </div>
-        )
-    }
-}
+// class Main extends Component {
+//     render() {
+//         return(
+//             <div>
+//             <Title todo = {'toDos'} />
+//             <SubTitle/>
+//             <List tasks = {[
+//                 'Pack bags to head back to Chicago',
+//                 'download podcasts for the drive home',
+//                 'Make sure we arent leaving baby stuff behind'
+//             ]}/>
+//
+//             <List tasks = {[
+//                 'Go to breakfast with family',
+//                 'Drive home to from MI',
+//                 'Watch the NBA Finals'
+//             ]}/>
+//             </div>
+//         )
+//     }
+// }
 
 // const element =
 //     <div>
