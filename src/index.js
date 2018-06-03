@@ -9,25 +9,25 @@ import ReactDOM from 'react-dom';
  //     'Kate'
  // ]
 
- const tasks = [
-     'Help Tyler get beer from the brewery to his house',
-     'Go to breakfast with everyone',
-     'Drop off Kate at the airport',
-     'Watch the Western Conference Finals'
- ]
+ // const tasks = [
+ //     'Help Tyler get beer from the brewery to his house',
+ //     'Go to breakfast with everyone',
+ //     'Drop off Kate at the airport',
+ //     'Watch the Western Conference Finals'
+ // ]
 
  // COMPONENTS- help break down the UI into smaller usable pieces by combining all of the UI components into a single, main component that's going to form all of the UI required
 class List extends Component {
     render() {
         return (    <ul>
-                        { tasks.map((task, index) => <li key = {index}> {task} </li>)}
+                        { this.props.tasks.map((task, index) => <li key = {index}> {task} </li>)}
                     </ul>)
     }
 }
 
 class Title extends Component {
     render() {
-        return (<h1>ToDo List</h1>)
+        return (<h1>{this.props.todo}</h1>)
     }
 }
 
@@ -41,9 +41,19 @@ class Main extends Component {
     render() {
         return(
             <div>
-            <Title/>
+            <Title todo = {'toDos'} />
             <SubTitle/>
-            <List/>
+            <List tasks = {[
+                'Pack bags to head back to Chicago',
+                'download podcasts for the drive home',
+                'Make sure we arent leaving baby stuff behind'
+            ]}/>
+
+            <List tasks = {[
+                'Go to breakfast with family',
+                'Drive home to from MI',
+                'Watch the NBA Finals'
+            ]}/>
             </div>
         )
     }
