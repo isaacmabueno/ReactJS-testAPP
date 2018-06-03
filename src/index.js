@@ -1,22 +1,65 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
 // WRITING ELEMENT
+
+ // const people = [
+ //     'Annie',
+ //     'Isaac',
+ //     'Kate'
+ // ]
+
  const tasks = [
-     'Take out the trash',
-     'Go to the skatepark',
-     'Walk the dog'
+     'Help Tyler get beer from the brewery to his house',
+     'Go to breakfast with everyone',
+     'Drop off Kate at the airport',
+     'Watch the Western Conference Finals'
  ]
 
- const people = [
-     'Annie',
-     'Isaac',
-     'Kate'
- ]
+ // COMPONENTS- help break down the UI into smaller usable pieces by combining all of the UI components into a single, main component that's going to form all of the UI required
+class List extends Component {
+    render() {
+        return (    <ul>
+                        { tasks.map((task, index) => <li key = {index}> {task} </li>)}
+                    </ul>)
+    }
+}
 
-const element = <ul>
-{ people.map((person, index) => <li key = {index}> {person} </li>)}
- </ul>
+class Title extends Component {
+    render() {
+        return (<h1>ToDo List</h1>)
+    }
+}
+
+class SubTitle extends Component {
+    render() {
+        return(<strong>These are today's tasks</strong>)
+    }
+}
+
+class Main extends Component {
+    render() {
+        return(
+            <div>
+            <Title/>
+            <SubTitle/>
+            <List/>
+            </div>
+        )
+    }
+}
+
+// const element =
+//     <div>
+//     <h1>ToDo List</h1>
+//     <p>The list I need to complete today</p>
+//         <ul>
+//             { tasks.map((task, index) => <li key = {index}> {task} </li>)}
+//         </ul>
+//      </div>
+
+
+
 // const element = React.createElement('ol' ,null,
 //
 // tasks.map((task, index) => React.createElement('li', {key: index}, task))
@@ -30,7 +73,7 @@ const element = <ul>
 // { tasks.map((task, index) => <li key = {index}> {task} </li> )}
 // </ol>
 
-ReactDOM.render(element, document.getElementById('root'));
+ReactDOM.render(<Main/>, document.getElementById('root'));
 
 
 // import React from 'react';
