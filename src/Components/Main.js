@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import Title from './Title'
 import SubTitle from './SubTitle'
 import ReactPhoto from './ReactPhoto'
-// import List from './List'
 
 const posts = [{
  id: "0",
@@ -24,7 +23,7 @@ class Main extends Component {
     render() {
         return
             <div>
-                <Title todo = {'ReactPhoto'} />
+                <Title title={'ReactPhoto'} />
                 <ReactPhoto posts = {posts} />
                 <SubTitle/>
                             </div>
