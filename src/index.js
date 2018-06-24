@@ -1,18 +1,31 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 // import Main from './Components/Main'
 // import './styles/styles.css'
 
-const tasks = ['Design TPD YC Booklet', 'Practice React', 'Sleep']
+const tasks = ['Design TPD YC Booklet', 'Practice React', 'Slsdfeep']
 
-const element =
-    <ol>
-        <li>{tasks[0]}</li>
-        <li>{tasks[1]}</li>
-        <li>{tasks[2]}</li>
-    </ol>
+    class List extends Component {
+        render() {
+            return( <ol>
+                {tasks.map((task, index)=> <li key={index}> {task} </li> )}
+            </ol>)
+        }
+    }
 
-ReactDOM.render(element, document.getElementById('root'));
+    class Title extends Component {
+        render() {
+            return <h1>Task List </h1>
+        }
+    }
+
+    class Main extends Component {
+        render() {
+            return <div><Title/><List/></div>
+        }
+    }
+
+ReactDOM.render(<Main/>, document.getElementById('root'));
 
 
 
