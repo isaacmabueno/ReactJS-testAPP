@@ -1,7 +1,18 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import Main from './Components/Main'
-import './styles/styles.css'
+// import Main from './Components/Main'
+// import './styles/styles.css'
+
+const tasks = ['Design TPD YC Booklet', 'Practice React', 'Sleep']
+
+const element =
+    <ol>
+        <li>{tasks[0]}</li>
+        <li>{tasks[1]}</li>
+        <li>{tasks[2]}</li>
+    </ol>
+
+ReactDOM.render(element, document.getElementById('root'));
 
 
 
@@ -88,7 +99,7 @@ import './styles/styles.css'
 // { tasks.map((task, index) => <li key = {index}> {task} </li> )}
 // </ol>
 
-ReactDOM.render(<Main/>, document.getElementById('root'));
+
 
 
 // import React from 'react';
