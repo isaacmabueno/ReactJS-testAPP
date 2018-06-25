@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import ReactPhoto from './ReactPhoto'
 import Title from './Title'
 
 const posts = [{
@@ -23,6 +24,7 @@ class Main extends Component {
         return (
         <div>
             <Title title={'React Photo'}/>
+            <ReactPhoto posts={posts}/>
         </div>
     );
     }
