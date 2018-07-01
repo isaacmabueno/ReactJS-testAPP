@@ -19,16 +19,24 @@ class Main extends Component {
              }, {
              id: "2",
              description: "On a vacation!",
-             imageLink: "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2017/08/24/104670887-VacationExplainsTHUMBWEB.1910x1000.jpg"
+             imageLink: "https://content.linkedin.com/content/dam/business/sales-solutions/global/en_US/blog/2017/09/what-george-costanza-can-teach-you-about-selling.png"
              }]
         }
+        this.removePhoto = this.removePhoto.bind()
+    }
+
+    removePhoto(postRemoved) {
+        console.log(postRemoved.description + postRemoved.id)
+        this.setState((state) => ({
+            posts: state.posts.filter(post => post !== postRemoved)
+        }))
     }
 
     render() {
         return (
             <div>
                 <Title title= {'React Photo'}/>
-                <PhotoWall posts = {this.state.posts}/>
+                <PhotoWall posts = {this.state.posts} onRemovePhoto={this.removePhoto}/>
             </div>
         )
     }
