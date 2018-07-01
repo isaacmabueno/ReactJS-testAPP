@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import ReactPhoto from './ReactPhoto'
 import Title from './Title'
+import PhotoWall from './ReactPhoto'
 
 const posts = [{
  id: "0",
@@ -18,15 +18,14 @@ const posts = [{
  imageLink: "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2017/08/24/104670887-VacationExplainsTHUMBWEB.1910x1000.jpg"
  }]
 
-
 class Main extends Component {
     render() {
         return (
-        <div>
-            <Title title={'React Photo'}/>
-            <ReactPhoto posts={posts}/>
-        </div>
-    );
+            <div>
+                <Title title= {'React Photo'}/>
+                <PhotoWall posts = {posts}/>
+            </div>
+        )
     }
 }
 
