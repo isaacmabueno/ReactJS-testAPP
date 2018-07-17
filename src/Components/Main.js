@@ -22,7 +22,7 @@ class Main extends Component {
              imageLink: "https://content.linkedin.com/content/dam/business/sales-solutions/global/en_US/blog/2017/09/what-george-costanza-can-teach-you-about-selling.png"
              }]
         }
-        this.removePhoto = this.removePhoto.bind()
+        this.removePhoto = this.removePhoto.bind(this)
     }
 
     removePhoto(postRemoved) {
