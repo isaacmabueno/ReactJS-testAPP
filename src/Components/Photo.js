@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 function Photo(props) {
     const post = props.post
@@ -10,6 +11,11 @@ function Photo(props) {
             props.onRemovePhoto(post)
         }}>Remove</button>
     </figure>
+}
+
+Photo.propTypes = {
+    post: PropTypes.object.isRequired,
+    onRemovePhoto: PropTypes.func.isRequired
 }
 
 export default Photo
